@@ -1,5 +1,7 @@
 package com.example.studentcard;
 
+import javafx.scene.image.Image;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +24,6 @@ public class Student {
     {
         return firstName;
     }
-
     public String getLastName()
     {
         return lastName;
@@ -65,6 +66,24 @@ public class Student {
     public void setActivities(List<String>activities) {
         this.activities = activities;
     }
+
+    @Override
+    public String toString()
+    {
+        return firstName + lastName;
+    }
+
+    public Image getImage()
+    {
+        String pathName = "images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" + firstName + lastName + studentNumber + activities;
+        return new Image(Student.class.getResourceAsStream(pathName));
+    }
+
+
+
+
+
+
 
 
 
